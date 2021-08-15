@@ -1,8 +1,8 @@
 object Main extends App {
-  val lst = List(List("A"), List("B", "C"))
+  val x = "A"
 
-  lst match {
-    case List(List("A"), List(x, y)) if x != "C" =>
+  x match {
+    case "a" | "A" =>
       println(x)
     case _ =>
       println("nothing")

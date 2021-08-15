@@ -1,11 +1,12 @@
-object Main extends App {
-  val lst = List("A", "B", "C", "D", "E")
+import java.util.Locale
 
-  lst match {
-    case "A" :: b :: c :: _ =>
-      println(b)
-      println(c)
-    case _ =>
-      println("nothing")
+object Main extends App {
+  val obj: AnyRef = "String Literal"
+
+  obj match {
+    case v: java.lang.Integer =>
+      println("Integer!")
+    case v: String =>
+      println(v.toUpperCase(Locale.ENGLISH))
   }
 }
